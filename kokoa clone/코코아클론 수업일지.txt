@@ -1,0 +1,178 @@
+8/24 HTML의 더 많은 태그
+
+- HTML CSS JavaScript 태그 검색할 시 MDN (Mozilla developer Network)같이 검색 FIRE
+
+- 동시에 선택해서 지우는 방법 Ctrl + D
+
+- attribute = 태그안의 성능
+
+- true = enabled
+
+- HTML의 태그를 모두 외울 필요는 없다
+
+
+
+
+8/25
+*HTML FORM태그들*
+- input : 입력하 수 있는 빈공간을 만들어 주는 것
+- input의 attribute는 다양하다 text를 넣을 수도 있고 placeholder를 통해 칸안에 뭘 적어야 되는지 알려줄 수도 있다
+- submit을 통해 어디로 보낼 수 있는 버튼을 만들 수도 있음
+- <tagname> attribute name= " attrvalue" > contents </tagname>
+ 값이 참,거짓일 경우 attrname앞에 required를 적어주면 된다
+- 동시에 적고 싶은 경우 Alt를 누른 상태에서 클릭해주면 동시에 적을 수가 있다
+- ID는 고유번호라 하나의 요소에는 하나의 ID만 넣을 수 있음
+  > CSS나 Script에서 찾아서 효과를 주려면 반드시 ID가 있어야 함
+  > ID는 고유해야 한다
+- semantic으로  작성하도록 노력 (semantic 태그란 딱 보면 뭘 의도하는지 아는 태그)
+- 한 문단정도는 <p> 짧은 text는 <span>
+- 태그에 의미가 있는 것들을 주로 사용하려고 노력하기
+- 어떤 attri는 모든 태그에 사용 가능하고 어떤 attri는 특정태그에서만 가능하다
+*CSS 강의 시작*
+-HTML 문서에 CSS추가하는 방법 
+ 1.직접 HTML문서에 <style>태그를 사용해 추가
+ 2. <link href= "" rel="stylesheet" /> 를 사용해서 HTML과 CSS분리하는 방법 단, .css를 가지는 파일명으로 파일을 만들것 좀 더 많이 사용하고 대중적인 방법과 효율적인 방법은 2번임
+*CSS 작성하는 룰*
+- 가리키는 대상을 먼저 적는다 그 다음  { } 그 안에 요소를 적고
+세미콜론으로 끝낸다
+-CSS는 맨 마지막줄에 적혀있는 속성을 적용시킨다 이유는 CSS라는 이름에 Casacading이란게 포함 되있음 위에서 부터 아래로 적용시킨다는 말 순차적으로 결국 적용되는건 마지막
+- 옆에 다른 요소가 못오는 걸 BOX = BLOCK 
+  옆에 다른 요소가 오는 걸 INLINE 대략적인것 span.img, a src
+
+
+
+
+8월 26일
+BLOCK->INLINE INLINE->BLOCK 바꾸는 방법
+
+- span은 display에서 타입 설정을 안해주면 브라우저에서는 기본 inline으로 인식
+
+- inline 높이와 너비 x 높이 너비 설정했는데 안보이는 거는 contents가 없어서임
+  block 높이와 너비 o
+
+- box의 세가지 속성
+  =margin, border, padding
+
+ * margin : box의 border(경계)로부터 바깥까지 있는 공간 
+    -body는 기본적으로 8px을 가지고 있다
+   -margin의 값을 줄때 일일이 right,left,bottom적을 필요없이
+   값을 4개를 주면 된다 그 값은 순차적으로 시계방향이다
+   -collapsing margins현상 두 개의 box의 경계가 같다면 이 두 box의 margin은 하나로 겹쳐진다 오직 위,아래로만 적용된다
+
+ *padding : box의 border(경계)로부터 안쪽까지 있는 공간
+ *border : 경계 그 자체 inline도 border를 적용시킬 수 있음
+css에서 id를 지정하는 방법은 #지정한 ID를 입력하면 된다
+*{}은 모든 곳에 적용시키는 것
+
+ -inline은 padding은 사방 가능하지만 margin은 좌우로만 가질 수 있다
+
+-class class지정 하는 방법은 .class
+  class는 id가 하나의 요소만 지정하는 특성과는 다르게 여러가지 요소를 한꺼번에 쓸 수 있는 장점이 있다
+
+-Inline Block  display에서 value를 inline-block으로 지정 해주면 된다
+ 하지만 아주아주 큰 단점이 있다 Responsive Design (반응형 디자인)을 지원하지 않는다
+ <반응형이란?> : 사용자들마다 각기 환경이 다르기 때문에 그 환경에 알맞게 알아서 크리에이터가 지정한 결과물을 보일 수 있게하는 것
+모니터 크기가 각각 다르더라도 작업자가 만든 결과물이 동일하게 보이도록 하는 것
+
+Inline Block의 단점을 보완하기 위해 Flexbox를 쓴다
+
+-Flexbox 3가지 룰
+  1.하위 속성(아들)을 움직이려면 상위 속성(부모)에 명령을 부하하라
+     아들의 부모를 display:flex로 만든다
+  2.main axis (주축,수평) cross axis (교차축,수직)
+-Flexbox 유형 (display;flex 선행 필수!)
+ justify-content: 주축 (main axis 수평기준)
+align-items : 교차축 (cross axis수직) - vh (viewport(screen) height)
+
+VSC 단축키
+
+7) 반복되는 단어 한방에 수정
+ Ctrl + D(한번씩 일일이 눌러줘야함 / 귀찮으면 Ctrl + F2)
+
+6) 클릭하는 곳마다 커서 생성
+Alt + Click
+
+5) 코드 위/아래로 움직이기
+Alt + ↑ / ↓
+
+4) 코드 복사해서 위/아래로 움직이기
+Alt + ⇧ + ↑ / ↓
+
+3) 코드 블록 한방에 코멘트 처리하기
+Ctrl + /
+
+2) 선택된 영역에 커서 만들기
+Alt + ⇧ + i
+
+1) 마우스가 가는 곳 마다 커서 만들기
+Alt + ⇧ + Mouse Drag
+
+파일 맨 위-아래로 한번에 이동하기
+Top / Bottom of File:  Ctrl + Home / End
+
+사이드바 숨기기
+Hide / Show Sidebar:  Ctrl + B
+
+8월 27일 Flexbox Part Two
+
+- flex direction : colum 을 값을 주면 주축과 교차축의 방향이 바뀐다
+
+- 내가 원하는 만큼 flex 부모-자식 엘리멘트를 만들어 낼 수 있다
+
+-flex 기능 
+   wrap : width정한 대로 간격을 유지 시켜준다 정 안된다 싶으면 다음 줄로 넘긴다
+  direction : default는 row (주축이 수평인 상태, 기본인 상태)
+                                  column (주축과 교차축이 뒤바뀐 상태)
+                                  reverse (방향성이 바뀌는 것)
+
+- position 기능 아주 조금씩 움직임 원래는 2 div에 동일한 선상에 있으면 같은 레이어를 쓰는데 포지션을 통해서 다른 레이어로 구분 시킬 수 있다  fixed
+
+- position static : 레이아웃이 박스를 처음 위치하는 곳에 두는것을 말함
+
+- position relative : 요소가 처음 위치한 곳을 기준으로
+                              상하좌우 값을 지정할 수가 있다
+
+- absolute : 가장 가까운 relative 부모를 기준으로 이동시켜준다 
+                  *여기서 relative부모를 정해주지 않으면 viewport=screen
+을 기준으로 움직인다
+
+
+9/13 Fiexd
+
+-Position fix는 div가 처음 생성된 자리에서 고정이 지정 되어짐
+
+-시작위치는 마음대로 바꿀 수가 있음
+
+-position : fix는 항상 위임 우선순위가 위
+
+- position : static : 레이아웃이 박스를 처음 위치하는 곳에 두는 것
+
+!!-position : relative - 박스를 아주 조금씩 이동 시키는 것 값을 부여하고 top left  방향을 적고 값을 입력하면
+ 그 만큼 이동이 가능해짐 처음 위치한 곳을 기준으로 수정함 
+
+엘리멘트의 처음 위치에서 수정 
+
+!!-position : absolute - body를 기준으로 방향설정해준대로 감 가장 가까운 relative 부모를 기준으로 이동  
+ 위 말이 무엇인가 하면 바로 위에 있는 div를 relative를 설정해주지 않으면 기존 값인 body기준으로 가게 된다
+
+
+relative와 absolute는 한 몸으로
+
+많이들 하는 실수 relative를 설정해주지 않아서 body 기준으로 왜 이동하는 지 모른다
+
+9/18 
+ 
+Pseudo Selectors
+
+-좀 더 세부적으로 엘리멘트를 선택해주는 것 
+
+div:last-child 리스트에 있는 div들 중 마지막에 있는 걸 선택
+nth-child () 괄호 안에 리스트 순서에 있는 순서번호를 적어주면 셀렉트가 가능
+하지만 여러개가 있는 상황에서 배열을 쓰고 싶다면?
+ 괄호 안에 even(짝수선택) odd (홀수선택) 
+하지만 특정 순서부터 시작하고싶다면
+n을 사용하기 
+n은 전체 
+2n짝수
+2n+1을 사용하면 n의 값은 0으로보고 1,3,5의 순서대로 간다
++1없이 2n만 사용하면 n은 1로보고 2번째부터 시작한다
